@@ -427,7 +427,8 @@ export default {
       })
     },
     start(){
-      Toast("该功能敬请期待!");
+      // Toast("该功能敬请期待!");
+      this.$router.push({path:"/calibrationone",query:{deviceId:this.data.deviceId}});
     },
     del(){
       let that = this;
@@ -436,7 +437,7 @@ export default {
         deviceId: this.data.deviceId,
         userId: localStorage.getItem("openId"),
       } 
-      let url = this.url + "/device/dmInfo/DeleteDevice";
+      let url = this.url + "/device/dmInfo/deleteDevice";
       console.log(data);
       Dialog.confirm({
         title: '提示',

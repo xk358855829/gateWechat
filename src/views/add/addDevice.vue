@@ -90,6 +90,7 @@ export default {
         if(res.data.code==200){
           Toast(res.data.message);  
           this.$router.push("/deviceList");      
+          // this.$router.push({path:"/calibrationone",query:{deviceId:that.deviceId}});
         }else if(res.data.code==5000){
           Toast(res.data.message);
           that.timer = setTimeout(()=>{

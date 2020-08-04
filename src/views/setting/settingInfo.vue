@@ -7,7 +7,7 @@
         <span>如果</span>  
       </div>
       <div class="settingTopInfo">
-        <span>{{type==101?"开门":type==102?"关门":type==103?"电压异常":type==104?"防拆报警":type==105?"开门时间超过":type==106?"开门用力过猛":"下雨"}}</span>
+        <span>{{type==101?"打开":type==102?"关闭":type==103?"电压异常":type==104?"防拆报警":type==105?"开门时间超过":type==106?"开门用力过猛":"下雨"}}</span>
         <span v-if="type==105">
           <input class="settingTime" type="number" v-model="times">
           <span>分钟</span>

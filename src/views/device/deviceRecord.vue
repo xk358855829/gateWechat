@@ -4,7 +4,7 @@
     <van-steps direction="vertical" v-for="item in recordList" :key="item.id">
       <h3 class="day" v-if="item.time=='今天'||item.time=='昨天'">{{item.time}}</h3>
       <h3 v-else="">{{item.time}}</h3>
-      <span></span>
+      <!-- <span></span> -->
       <van-step v-for="item1 in item.children" :key="item1.id1">
         <span class="recordTime">{{item1.time}}</span>
         <img class="recordLogo" :src="item1.warningType==101?img0:item1.warningType==102?img1:item1.warningType==103?img2:item1.warningType==106?img3:item1.warningType==107?img4:item1.warningType==105?img5:img6" alt="">
@@ -13,7 +13,7 @@
           <p>{{item1.warningType==101?data.alias+"已打开":item1.warningType==102?data.alias+"已关闭":item1.warningType==103?"请及时更换电池":item1.warningType==106?"开/关时用力过猛，请小心呵护":item1.warningType==107?"下雨啦，请及时关窗":item1.warningType==105?"开门时间过长":"请查看是否有人恶意拆除"}}</p>
         </div>
       </van-step>
-      <span></span>
+      <!-- <span></span> -->
     </van-steps>
     <div class="norecord" v-if="noList==true">
       <img src="../../assets/img/device/norecord.png" alt="">
@@ -157,14 +157,14 @@ export default {
   .deviceRecord h3.day{
     padding: 24px 0 14px 41px;
   }
-  .van-steps__items>span{
+  /* .van-steps__items>span{
     display: inline-block;
     width: 6px;
     height: 6px;
     background: #CDCDCD;
     border-radius: 50%;
     margin-left: 54px;
-  }
+  } */
   .van-step--vertical:not(:last-child)::after{
     border-bottom-width: 0;
   }
